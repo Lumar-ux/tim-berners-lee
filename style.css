@@ -84,17 +84,19 @@ main section {
   position: relative;
   left: 22px;
   width: 734px;
-  /* height: 760px; */
 }
-main .history {
+main .history ul {
   font-family: "Segoe UI", sans-serif;
   color: #0000ee;
   display: flex;
-  text-decoration: row;
+  text-decoration: column;
   font-size: 14px;
   font-weight: 500;
   gap: 10px;
   margin-top: 22px;
+}
+.history ul li{
+  list-style-type: none; 
 }
 main .main-text {
   background-color: white;
@@ -127,12 +129,12 @@ main .main-text {
 .main-text .main-article-one em {
   margin: 15px 0 0 0;
 }
-.main-text article p a,
+.main-text .text-bio{
+  margin-top: 22px;
+}
+.main-text .text-bio a,
 main aside a {
   text-decoration: none;
-}
-.main-text .main-article-one {
-  margin: 0 0 22px 0;
 }
 .main-text .main-article-one button {
   background-color: white;
@@ -196,7 +198,7 @@ aside figure + a {
 aside figcaption{
   font-size: 16px;
 }
-aside figure .container-zoom{
+aside figure article{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,4 +219,9 @@ aside .zoom{
   background-color: white;
   border-radius: 24px;
   border-bottom: 1px solid #dddddd;
+}
+@media only screen and (max-width:768px){
+  main{
+    flex-direction: column;
+  }
 }
